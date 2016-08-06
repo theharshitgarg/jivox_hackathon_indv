@@ -10,7 +10,17 @@ def bubble_sort(input_list):
 		print "*"*28
 		print "BB Sort"
 		print "*"*28
-		
+	
+	if len(input_list) < 2:
+		return input_list
+			
+	for i in range(len(input_list)):
+		for j in range(len(input_list)-i-1):
+			if input_list[j] > input_list[j+1]:
+				tmp = input_list[j]
+				input_list[j] = input_list[j+1] 
+				input_list[j+1] = tmp
+				
 		
 
 def insertion_sort(input_list):
