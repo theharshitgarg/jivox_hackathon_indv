@@ -1,3 +1,6 @@
+from memory_profiler import profile
+
+@profile
 def heapify(input_list, n, i):
     largest = i
     left = 2*i+1 
@@ -14,7 +17,7 @@ def heapify(input_list, n, i):
  
         heapify(input_list, n, largest)
  
-
+@profile
 def heap_sort(input_list):
     n = len(input_list)
  

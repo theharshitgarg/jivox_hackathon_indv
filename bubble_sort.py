@@ -2,8 +2,11 @@
 #DATE : AUGUST 6, 2016
 #BUBBLE SORT
 
+from memory_profiler import profile
 debug = True 
 
+
+@profile
 def bubble_sort(input_list):
 	if debug :
 		print "*"*28
