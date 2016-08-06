@@ -53,8 +53,19 @@ def main():
 			print "DDD", input_list
 		elif option == 4:
 			print "HEAP"
-			print heap_sort(input_list)
+			#print heap_sort(input_list)
 			print input_list
+			from heap_class import MyHeap
+			h = MyHeap()
+			for i in input_list:
+				h.push(i)
+			print h.max_element()
+			h.push(34)
+			h.push(134)
+			h.push(2)
+			print h.max_element()
+			h.extract_max_element()
+			print h.max_element()
 	
 
 if '__main__'==__name__:
